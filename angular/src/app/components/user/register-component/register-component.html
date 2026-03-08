@@ -1,0 +1,54 @@
+<div class="card drawer-card flex justify-center">
+  <p-drawer 
+    [(visible)]="visible" 
+    [modal]="true" 
+    [style]="{ width: '450px' }" 
+    header="יצירת חשבון חדש"
+    (onHide)="onDrawerHide()">
+      
+    <p-toast class="r" /> 
+
+    <form [formGroup]="fromregister" class="drawer-form">
+      
+      <p-floatLabel variant="on" class="drawer-field">
+        <input pInputText id="username" formControlName="username" />
+        <label for="username">שם משתמש *</label>
+      </p-floatLabel>
+
+      <p-floatLabel variant="on" class="drawer-field">
+        <input pInputText id="password" type="password" formControlName="password" />
+        <label for="password">סיסמה *</label>
+      </p-floatLabel>
+
+      <p-floatLabel variant="on" class="drawer-field">
+        <input pInputText id="name" formControlName="name" />
+        <label for="name">שם מלא *</label>
+      </p-floatLabel>
+
+      <p-floatLabel variant="on" class="drawer-field">
+        <input pInputText id="email" formControlName="email" />
+        <label for="email">כתובת מייל *</label>
+      </p-floatLabel>
+
+      <p-floatLabel variant="on" class="drawer-field">
+        <input pInputText id="phone" formControlName="phone" />
+        <label for="phone">מספר טלפון *</label>
+      </p-floatLabel>
+
+      <p-floatLabel variant="on" class="drawer-field">
+        <input pInputText id="address" formControlName="address" />
+        <label for="address">כתובת מגורים</label>
+      </p-floatLabel>
+
+      <button 
+        pButton 
+        type="button" 
+        label="הרשמה למערכת" 
+        class="btn-register" 
+        [disabled]="fromregister.invalid" 
+        (click)="register()">
+      </button>
+
+    </form>
+  </p-drawer>
+</div>

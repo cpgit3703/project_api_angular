@@ -1,0 +1,215 @@
+.donor-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 6px;
+  border-bottom: 1px solid #e6e0db;
+}
+.search-filter-panel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 20px;
+  align-items: center;
+}
+.donor-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+/* עיצוב ה-Input וה-Select בפאנל החיפוש */
+.search-filter-panel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 20px;
+  align-items: center;
+
+  /* עיצוב אחיד לשניהם */
+  input, select {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    background-color: white; /* מבטיח רקע נקי */
+    color: #444;
+    height: 38px; /* גובה אחיד לשניהם */
+    box-sizing: border-box;
+  }
+
+  /* אפקט פוקוס (כמו שביקשת) */
+  input:focus, select:focus {
+    border-color: #d4a373;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(212, 163, 115, 0.2);
+  }
+
+  /* התאמה ספציפית ל-select כדי שייראה טוב עם החץ */
+  select {
+    cursor: pointer;
+    min-width: 120px;
+    appearance: none; /* מסיר את עיצוב ברירת המחדל של הדפדפן */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: left 0.75rem center; /* חץ בצד שמאל בגלל ה-RTL */
+    background-size: 1em;
+    padding-left: 2.5rem; /* רווח לחץ */
+  }
+}
+
+.donor-name {
+  font-weight: 600;
+  color: #333;
+}
+
+.donor-meta {
+  font-size: 0.85rem;
+  color: #777;
+  display: flex;
+  gap: 12px;
+}
+
+/* 🔹 אייקונים */
+.donor-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.action-icon {
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 50%;
+  transition: 0.2s ease;
+}
+
+.action-icon.edit {
+  color: #888;
+
+  &:hover {
+    background: #f1ece8;
+    color: #6b4f3f;
+  }
+}
+
+.action-icon.delete {
+  color: #bbb;
+
+  &:hover {
+    background: #f7eaea;
+    color: #c0392b;
+  }
+}
+.dialog-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  label {
+    width: 6rem;
+    font-weight: 600;
+    color: #444;
+  }
+
+  input {
+    flex: 1;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    transition: border 0.2s ease;
+
+    &:focus {
+      border-color: #d4a373; // צבע עדין שמתאים לסל
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(212, 163, 115, 0.2);
+    }
+  }
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+
+  ::ng-deep .p-button {
+    border-radius: 8px;
+    padding: 0.5rem 1.25rem;
+    font-weight: 600;
+  }
+
+  ::ng-deep .p-button[severity="secondary"] {
+    background-color: #f7f1ed;
+    color: #6b4f3f;
+    border: 1px solid #ddd;
+
+    &:hover {
+      background-color: #e6dbd0;
+      color: #5a4032;
+    }
+  }
+}
+.donor-detail-page {
+  display: flex;
+  gap: 2rem;
+  padding: 1.5rem;
+}
+
+/* פרטי התורם - תופס רבע מהדף */
+.donor-info-panel {
+  flex: 1 1 25%;
+  background: #f9f5f2;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* מתנות - תופס את השאר */
+.donor-gifts-panel {
+  flex: 1 1 75%;
+}
+
+.gifts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.gift-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 0.5rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.gift-card:hover {
+  transform: translateY(-4px);
+}
+
+.gift-image {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.gift-name {
+  margin-top: 0.5rem;
+  font-weight: 600;
+  color: #333;
+}
+

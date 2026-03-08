@@ -1,0 +1,464 @@
+.gifts-container {
+    padding: 16px;
+  }
+  .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+  }
+  .gift-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse; /* אם אתה רוצה הפוך */
+}
+
+.gift-icons {
+  display: flex;
+  gap: 10px; /* רווח בין העיפרון לפח */
+}
+
+.edit-icon {
+  cursor: pointer;
+  color: #888;
+  transition: 0.2s;
+}
+
+.edit-icon:hover {
+  color: #d4a373;
+}
+
+.delete-icon {
+  cursor: pointer;
+  color: #c0392b;
+  transition: 0.2s;
+}
+
+.delete-icon:hover {
+  color: #e74c3c;
+}
+
+  .category-button {
+    width: 140px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #f6eee9;
+    border: none;
+    font-size: 13px;
+    font-weight: 500;
+    color: #4a2b1f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+  
+  .category-button:hover {
+    background-color: #ead9cf;
+    color: #7a1f2b;
+    font-weight: 600;
+  }
+  /* כפתור פעיל (אם תרצי) */
+  .category-button.active {
+    background-color: #7a1f2b;
+    color: white;
+  }
+  
+  .title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .empty {
+    text-align: center;
+    color: #999;
+  }
+  
+  .gifts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 16px;
+  }
+  
+  .gift-card {
+    position: relative;
+    border: 1px solid #e8e3dd;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .gift-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    border-color: #d9cfc6;
+  }
+  
+  .image-container {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    background: #f5f5f5;
+  }
+  
+  .gift-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .gift-card:hover .gift-image {
+    transform: scale(1.05);
+  }
+  
+  .winner-badge {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 11px;
+    pointer-events: none;
+    max-width: calc(100% - 16px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .winner-badge.no-winner {
+    background: rgba(122, 31, 43, 0.85);
+  }
+  
+  .gift-content {
+    padding: 12px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .gift-name {
+    margin: 0 0 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #2c2c2c;
+    line-height: 1.3;
+    text-align: right;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .gift-description {
+    font-size: 12px;
+    color: #888;
+    margin: 0 0 8px;
+    line-height: 1.2;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-align: right;
+  }
+  
+  .gift-footer {
+    background: #F7F1ED;
+    margin: 12px -12px -12px -12px;
+    padding: 12px;
+    border-top: 1px solid #F7F1ED;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .gift-info {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .gift-value {
+    font-size: 13px;
+    font-weight: 600;
+    color: #4a3728;
+    text-align: center;
+  }
+
+.gift-name {
+  margin: 0;
+  font-weight: bold;
+}
+
+
+.categories-bar {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.category-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: none;
+  background: #f6eee8;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  transition: all 0.3s ease;
+
+  &.active {
+    background-color: #e3d0c4; // הצבע הכהה של המותג שלך           // טקסט לבן כדי שיהיה קריא
+    font-weight: bold;
+    
+  }
+}
+.delete-icon {
+    color: black; 
+}
+
+.category-chip i {
+  font-size: 16px;
+}
+
+.category-chip:hover {
+  background: #e8d9cf;
+}
+/* --- סגנון פאנל חיפוש וסינון --- */
+.search-filter-panel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+/* שדה חיפוש */
+.search-filter-panel input[pInputText] {
+  width: 220px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.search-filter-panel input[pInputText]:focus {
+  border-color: #7a1f2b;
+  box-shadow: 0 0 5px rgba(122, 31, 43, 0.3);
+  outline: none;
+}
+
+/* תפריטי בחירה */
+.search-filter-panel select {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.search-filter-panel select:hover {
+  border-color: #7a1f2b;
+}
+
+/* צבע רקע ופוקוס עבור הבחירה */
+.search-filter-panel select:focus {
+  border-color: #7a1f2b;
+  box-shadow: 0 0 5px rgba(122, 31, 43, 0.3);
+  outline: none;
+}
+
+/* אייקונים או טקסטים פנימיים */
+.search-filter-panel .pi {
+  margin-right: 4px;
+}
+
+/* רספונסיבי - מסודר בטלפון */
+@media (max-width: 600px) {
+  .search-filter-panel {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search-filter-panel input[pInputText],
+  .search-filter-panel select {
+    width: 100%;
+  }
+}
+
+
+// .gift-actions {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     gap: 2px;
+//   }
+  
+  .action-btn {
+    width: 28px;
+    height: 28px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #f9f9f9;
+    color: #666;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+  
+  .edit-btn:hover {
+    background: #f0ede9;
+    border-color: #4a2b1f;
+    color: #4a2b1f;
+  }
+  
+  // .add-btn {
+  //   order: 4;
+  //   flex: 1;
+  //   height: auto;
+  //   border: none;
+  //   border-radius: 0;
+  //   background: transparent;
+  //   // color:white;
+  //   font-size: 13px;
+  //   font-weight: 600;
+  //   cursor: pointer;
+  //   transition: all 0.2s ease;
+  //   padding: 0 6px;
+  //   text-decoration: none;
+  // }
+  
+  // .add-btn:hover {
+  //   // background: transparent;
+  //   // color: #5a1620;
+  //   box-shadow: none;
+  //   // text-decoration: underline;
+  // }
+  
+  .quantity-control {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #f9f9f9;
+    overflow: hidden;
+  }
+  
+  .qty-btn {
+    width: 24px;
+    height: 24px;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    color: #4a3728;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+  
+
+  
+  // .quantity-box {
+  //   order: 2;
+  //   flex: 0 0 auto;
+  //   border: none;
+  //   border-radius: 0;
+  //   background: transparent;
+  //   padding: 0 6px;
+  //   margin: 0;
+  // }
+  
+  // .qty-input {
+  //   width: 20px;
+  //   height: 24px;
+  //   border: none;
+  //   background: transparent;
+  //   text-align: center;
+  //   font-size: 12px;
+  //   font-weight: 600;
+  //   color: #2c2c2c;
+  //   padding: 0;
+  // }
+  
+  .qty-input:focus {
+    outline: none;
+  }
+
+
+
+.gift-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* מרכוז כל הקבוצה לאמצע הכרטיס */
+    // gap: 5px;               /* רווח קטן ואחיד בין כל החלקים */
+    width: 100%;
+    direction: ltr;         /* מבטיח שהסדר יהיה [מינוס] [מספר] [פלוס] משמאל לימין */
+}
+
+.quantity-box {
+    /* הסרתי את ה-order כדי שיזרום לפי ה-HTML */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5px;
+    background: transparent;
+}
+
+.qty-input {
+    width: 30px;            /* רוחב קבוע למספר כדי שלא יזוז */
+    text-align: center;     /* מרכוז המספר בתוך התיבה שלו */
+    border: none;
+    background: transparent;
+    font-weight: bold;
+}
+
+.add-btn {
+    margin-right: 10px;     /* רווח קטן בין קבוצת הכמות לכפתור ההוספה */
+    flex: none;             /* מבטל מתיחה של הכפתור */
+    width: auto;
+    background: transparent;
+    // color: #7a1f2b;.
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 13px;
+    transition: all 0.2s ease;
+    padding: 0 6px;
+     text-decoration: none;
+     border: none;
+}
+
+/* שאר האלמנטים (qty-btn, quantity-box) כבר מוגדרים אצלך עם רוחב קבוע, אז הם פשוט יסתדרו לידו במרכז */
