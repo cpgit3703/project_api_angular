@@ -41,3 +41,15 @@ __screenshots__/
 # System files
 .DS_Store
 Thumbs.db
+# Visual Studio ומערכת הפעלה
+.vs/
+.idea/
+*.user
+*.suo
+
+# תיקיות קומפילציה והרצה
+[Bb]in/
+[Oo]bj/
+
+# קבצי לוגים וקש
+*.log
